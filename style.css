@@ -2,4 +2,56 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Aldrich", sans-serif;
+    user-select: none;
+    letter-spacing: 2px;
+}
+html,
+body {
+    height: 100%;
+}
+h1 {
+    font-family: "Atma", system-ui;
+    text-align: center;
+    height: 70px;
+}
+
+.new-grid-btn {
+    display: block;
+    margin: 0px auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all ease 0.15s;
+}
+
+.new-grid-btn:hover {
+    background-color: #fff;
+    border: 1px solid rgba(211, 211, 211, 0.795);
+}
+
+.new-grid-btn:active {
+    transform: scale(0.98);
+}
+
+.sketch {
+   height: 600px;
+   width: 600px;
+   border: 1px solid gray;
+   margin: 0px auto;
+   margin-top: 60px;
+   display: flex;
+   flex-direction: column;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.column {
+    display: flex;
+    flex: 1;
+    border: 1px solid black;
 }
