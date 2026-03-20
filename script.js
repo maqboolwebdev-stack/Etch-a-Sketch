@@ -8,31 +8,35 @@ function reSizeGrid() {
 }
 
 function defaultGrid(size) {
-    for (let i = 1; i <= size; i++) {
+    for (let rowIndex = 1; rowIndex <= size; rowIndex++) {
         const row = document.createElement('div');
         row.classList.add('row');
         sketch.appendChild(row);
-        for (let i = 1; i <= size; i++) {
+
+        for (let columnIndex = 1; columnIndex <= size; columnIndex++) {
             const column = document.createElement('div');
             column.classList.add('column');
-            row.appendChild(column).addEventListener('mouseenter', function() {
+            row.appendChild(column);
+
+            column.addEventListener('mouseenter', function () {
                 column.style.backgroundColor = 'black';
             });
         }
     }
 }
 
+// Initial Grid
 defaultGrid(16);
 
 function createGrid() {
-    reSizeGrid();
     let userChoiceGrid = Number(prompt('Enter a Number between 1-100'));
 
     if (Number.isNaN(userChoiceGrid)) {
-         alert('Value Should be Number');
-    } else if (userChoiceGrid > 100) {
-        alert('Please! between 1 to 100');
+        return alert('Value Should be Number');
+    } else if (userChoiceGrid > 100 || userChoiceGrid < 1) {
+        return alert('Please! between 1 to 100');
     } else {
+        reSizeGrid();
         defaultGrid(userChoiceGrid);
     }
 };
