@@ -1,50 +1,84 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Aldrich", sans-serif;
-    user-select: none;
-    letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Aldrich", sans-serif;
+  user-select: none;
+  letter-spacing: 2px;
 }
 html,
 body {
-    height: 100%;
-    background: linear-gradient(331deg, rgba(255, 0, 0, 0.1), rgba(0, 128, 0, 0.1), rgba(0, 0, 255, 0.1))
+  height: 100%;
+  background: linear-gradient(
+    331deg,
+    rgba(255, 0, 0, 0.1),
+    rgba(0, 128, 0, 0.1),
+    rgba(0, 0, 255, 0.1)
+  );
 }
 h1 {
-    font-family: "Atma", system-ui;
-    text-align: center;
-    padding: 30px 0px;
+  font-family: "Atma", system-ui;
+  text-align: center;
+  padding: 30px 0px;
 }
 
 .new-grid-btn {
-    display: block;
-    margin: 0px auto;
+  display: block;
+  margin: 0px auto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all ease 0.15s;
+}
+
+.new-grid-btn:hover {
+  background-color: transparent;
+  border: 1px solid rgba(207, 203, 203, 0.795);
+}
+
+.new-grid-btn:active {
+  transform: scale(0.98);
+}
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 50px;
+}
+
+.buttons-container {
+  align-self: flex-start;
+
+}
+
+.clear-color-btn {
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     border: 1px solid transparent;
     cursor: pointer;
     transition: all ease 0.15s;
 }
 
-.new-grid-btn:hover {
-    background-color: #fff;
-    border: 1px solid rgba(211, 211, 211, 0.795);
+.clear-color-btn:hover {
+    background-color: transparent;
+    border: 1px solid rgba(207, 203, 203, 0.795);
+    transform: scale(1.05);
 }
 
-.new-grid-btn:active {
-    transform: scale(0.98);
+.clear-color-btn:active {
+    transform: scale(1);
 }
 
 .sketch {
-   height: 550px;
-   width: 550px;
-   margin: 0px auto;
-   margin-top: 50px;
-   display: flex;
-   flex-direction: column;
-   background-color: #fff;
-   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  height: 550px;
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 .row {
   display: flex;
@@ -52,7 +86,7 @@ h1 {
 }
 
 .column {
-    display: flex;
-    flex: 1;
-    border: 1px solid rgba(0, 0, 0, 0.250);
+  display: flex;
+  flex: 1;
+  border: 1px solid rgba(0, 0, 0, 0.25);
 }
