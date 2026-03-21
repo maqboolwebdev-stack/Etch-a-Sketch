@@ -1,6 +1,7 @@
 const newGridBtn = document.querySelector('.new-grid-btn');
 const sketch = document.querySelector('.sketch');
 const clearBtn = document.querySelector('.clear-color-btn');
+const randomColorBtn = document.querySelector('.random-color-btn');
 
 function reSizeGrid() {
     document.querySelectorAll('.row').forEach((element) => {
@@ -24,7 +25,13 @@ function defaultGrid(size) {
             });
             clearBtn.addEventListener('click', function(){
                 column.style.backgroundColor = 'transparent';
-            })
+            });
+            randomColorBtn.addEventListener('click', function(){
+                column.addEventListener('mouseenter', function(){
+                    column.style.backgroundColor = rgbColorGenerator();
+
+                });
+            });
         }
     }
 }
@@ -44,6 +51,14 @@ function createGrid() {
         defaultGrid(userChoiceGrid);
     }
 };
+
+function random(number){
+    return  Math.floor(Math.random() * (number + 1));
+}
+
+function rgbColorGenerator() {
+    return `rgb(${random(255)} ${random(255)} ${random(255)})`;
+}
 
 newGridBtn.addEventListener('click', createGrid);
 
