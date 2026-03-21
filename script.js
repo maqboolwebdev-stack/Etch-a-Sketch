@@ -1,5 +1,6 @@
 const newGridBtn = document.querySelector('.new-grid-btn');
 const sketch = document.querySelector('.sketch');
+const clearBtn = document.querySelector('.clear-color-btn');
 
 function reSizeGrid() {
     document.querySelectorAll('.row').forEach((element) => {
@@ -21,6 +22,9 @@ function defaultGrid(size) {
             column.addEventListener('mouseenter', function () {
                 column.style.backgroundColor = 'black';
             });
+            clearBtn.addEventListener('click', function(){
+                column.style.backgroundColor = 'transparent';
+            })
         }
     }
 }
