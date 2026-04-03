@@ -140,7 +140,7 @@ h1 {
 .column {
   display: flex;
   flex: 1;
-  cursor: zoom-in;
+  cursor: crosshair;
   border: 1px solid rgba(0, 0, 0, 0.014);
 }
 
