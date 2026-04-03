@@ -3,9 +3,11 @@ const sketch = document.querySelector('.sketch');
 const clearBtn = document.querySelector('.clear-color-btn');
 const randomColorBtn = document.querySelector('.random-color-btn');
 const colorPickerInput = document.querySelector('#colorPicker');
+const eraseBtn = document.querySelector('.erase-color-btn');
 
 let mode = 'color';
 let selectedColor = '#000000';
+let eraseMode = 'transparent'
 
 function clearGrid() {
     sketch.innerHTML = '';
@@ -38,6 +40,8 @@ function handleDraw(e) {
         cell.style.backgroundColor = selectedColor;
     } else if (mode === 'random') {
         cell.style.backgroundColor = generateRandomRGB();
+    } else if(mode === 'erase') {
+        cell.style.backgroundColor = eraseMode;
     }
 }
 
@@ -55,6 +59,7 @@ function handleNewGrid() {
     }
 
     createGrid(input);
+    
 }
 
 function handleColorPick(e) {
@@ -64,6 +69,11 @@ function handleColorPick(e) {
 
 function handleRandomMode() {
     mode = 'random';
+    console.log(33);
+}
+
+function handleErase() {
+    mode = 'erase';
 }
 
 function handleClear() {
@@ -84,6 +94,7 @@ newGridBtn.addEventListener('click', handleNewGrid);
 colorPickerInput.addEventListener('input', handleColorPick);
 randomColorBtn.addEventListener('click', handleRandomMode);
 clearBtn.addEventListener('click', handleClear);
+eraseBtn.addEventListener('click', handleErase);
 
 // Initial grid
 createGrid(16);
