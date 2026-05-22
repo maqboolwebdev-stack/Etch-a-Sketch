@@ -1,4 +1,5 @@
-const newGridBtn = document.querySelector('.new-grid-btn');
+const rangeBar = document.querySelector('.range');
+const rangeValue = document.querySelector('.rangeValue');
 const sketch = document.querySelector('.sketch');
 const clearBtn = document.querySelector('.clear-color-btn');
 const randomColorBtn = document.querySelector('.random-color-btn');
@@ -46,19 +47,11 @@ function handleDraw(e) {
 }
 
 function handleNewGrid() {
-    const input = Number(prompt('Enter grid size (1–100):'));
-
-    if (Number.isNaN(input)) {
-        alert('Value must be a number');
-        return;
-    }
-
-    if (input < 1 || input > 100) {
-        alert('Enter value between 1 and 100');
-        return;
-    }
-
-    createGrid(input);
+    rangeBar.addEventListener('input', function() {
+        rangeValue.textContent = rangeBar.value;
+        let input = rangeBar.value
+        createGrid(input);
+    })
     
 }
 
@@ -90,7 +83,7 @@ function generateRandomRGB() {
     return `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
 }
 
-newGridBtn.addEventListener('click', handleNewGrid);
+rangeBar.addEventListener('input', handleNewGrid);
 colorPickerInput.addEventListener('input', handleColorPick);
 randomColorBtn.addEventListener('click', handleRandomMode);
 clearBtn.addEventListener('click', handleClear);
