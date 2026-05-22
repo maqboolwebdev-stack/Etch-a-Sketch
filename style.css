@@ -67,24 +67,23 @@ h1 {
   font-size: 2.5rem;
 }
 
-.new-grid-btn {
-  display: block;
-  margin: 0 auto;
-  padding: 0.625rem 1.25rem;
-  border-radius: 0.313rem;
-  border: 1px solid transparent;
+.range-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.range {
+  accent-color: hsl(0, 77%, 49%);
+  min-width: 20%;
+  max-width: 50%;
   cursor: pointer;
-  transition: all ease 0.15s;
+  outline-offset: .5rem;
+  border: 1px solid blue;
 }
 
-.new-grid-btn:hover {
-  background-color: transparent;
-  border: 1px solid rgba(207, 203, 203, 0.795);
-}
-
-.new-grid-btn:active {
-  transform: scale(0.98);
-}
 .main {
   display: flex;
   justify-content: center;
