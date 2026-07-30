@@ -1,3 +1,5 @@
+import { buttons } from "./active-btn.js";
+
 const rangeBar = document.querySelector('.range');
 const rangeValue = document.querySelector('.rangeValue');
 const sketch = document.querySelector('.sketch');
@@ -62,7 +64,6 @@ function handleColorPick(e) {
 
 function handleRandomMode() {
     mode = 'random';
-    console.log(33);
 }
 
 function handleErase() {

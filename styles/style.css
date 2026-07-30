@@ -1,3 +1,6 @@
+@import url("css-resets.css");
+@import url("active-btn.css");
+
 :root {
   --main-liner-gradient: linear-gradient(
     331deg,
@@ -5,50 +8,6 @@
     rgba(0, 128, 0, 0.1),
     rgba(0, 0, 255, 0.1)
   )
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  letter-spacing: 2px;
-}
-
-*:not(dialog) {
-  margin: 0;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-p, h1, h2, h3, h4, h5, h6 {
-  overflow-wrap: break-word;
-}
-
-p {
-  text-wrap: pretty;
-}
-h1, h2, h3, h4, h5, h6 {
-  text-wrap: balance;
-}
-
-#root, #__next {
-  isolation: isolate;
 }
 
 html,
@@ -103,13 +62,12 @@ h1 {
     border-radius: 0.938rem;
     border: 1px solid transparent;
     cursor: pointer;
-    transition: all ease 0.15s;
+    transition: all ease 0.30s;
 }
 
 .side-btn:hover {
     background-color: transparent;
     border: 1px solid rgba(207, 203, 203, 0.795);
-    transform: scale(1.05);
 }
 
 .side-btn:active {
